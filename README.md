@@ -1,3 +1,2 @@
 # Exam_Cheatsheet
- Cekk
-A
+Bismillah, Cheatsheet for OSCP Exam.
