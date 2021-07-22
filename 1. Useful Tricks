@@ -42,4 +42,9 @@ ldapsearch -h 192.168.181.122 -p 3268 -x -b "dc=hutch,dc=offsec"
 - ^M bad interpreter removal
 > sed -i -e "s/^M//" <nama file>
 
--
+- SCP
+  - windows
+  > scp shell.exe ariah@192.168.192.99:C:\\Users\\ariah\\Desktop\\shell.exe
+
+  - Linux
+  > scp -i id_rsa -r scp_wrapper.sh max@192.168.235.100:/home/max/scp_wrapper.sh
