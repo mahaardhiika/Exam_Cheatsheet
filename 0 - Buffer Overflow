@@ -32,7 +32,7 @@
    !mona modules                                                  #Listing the modules
    !mona modules -o                                               #Listing only the modules that belong to the operating system.(We choose a module that has no memory protections and also does not contain bad characters at the pointer address.)
    /usr/share/metasploit-framework/tools/exploit/nasm_shell.rb    #Detection of the JMP ESP value
-   !mona find -s “<JMP_ESP_Value>” -m vulnapp_dll.dll             #Detection of the module in which JMP ESP value is passed
+   !mona find -s '\xFF\xE4' -m vulnapp_dll.dll             #Detection of the module in which JMP ESP value is passed
 
 
 5. Pop Up Calc!
